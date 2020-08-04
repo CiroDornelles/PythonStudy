@@ -1,10 +1,10 @@
 import Item
 
-class Section():
-    items = []
+class Section(object):
+    
     def __init__(self,name):
         self.name = name
+        self.items = []
 
-    def addSectionItem(self, name):
-        item = Item.Item(name)
+    def addSectionItem(self, item):
         self.items.append(item)

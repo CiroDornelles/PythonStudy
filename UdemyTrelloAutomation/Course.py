@@ -36,6 +36,7 @@ class Course:
         soup = BeautifulSoup(html_content,features='lxml')
         tableOfValues = soup.find('div', class_=re.compile('curriculum--content--*'))
         curso = self.getCourse(tableOfValues)
+        driver.quit()
         return curso
         
     def getName(self, url):
